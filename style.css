@@ -9,3 +9,241 @@ a {
 html {
   scroll-behavior: smooth;
 }
+.container {
+  max-width: 1070px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+/* header */
+header {
+  border-bottom: 3px solid #fff;
+  background: rgba(43, 74, 97, 0.87);
+  position: absolute;
+  right: 50%;
+
+  transform: translateX(50%);
+}
+.flexdiv {
+  display: flex;
+  align-items: center;
+}
+.nav-ul {
+  display: flex;
+  align-items: center;
+  margin-left: 180px;
+  margin-right: 230px;
+}
+.nav-ul > li:not(:last-child) {
+  margin-right: 40px;
+}
+
+.now-link > p {
+  color: #94cfff;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.nav-link > p {
+  white-space: nowrap;
+  color: #fff;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.header-button {
+  border-radius: 45px 0px;
+  border: 3px solid #26c7ea;
+  background: #0b0e66;
+  padding: 10px 35px;
+}
+.header-button > p {
+  white-space: nowrap;
+  color: #26c6ea;
+  text-align: justify;
+  font-family: "Headland One", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+/* hero-section */
+.hero-section {
+  padding: 180px 0px;
+  background: url(./assests/imgs/header-background.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.flex-header-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container-text {
+  /*  */
+  width: 280px;
+}
+
+.container-text > p {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+/*  */
+/* .button-header {
+  padding: 25px 75px;
+  border-radius: 45px 0px;
+  border: 3px solid #26c7ea;
+  background: #0b0e66;
+} */
+.button-header {
+  padding: 25px 0px;
+  border-radius: 45px 0px;
+  border: 3px solid #26c7ea;
+  background: #0b0e66;
+  display: block;
+  width: 260px;
+  margin-top: 40px;
+}
+.button-header > p {
+  color: #26c7ea;
+  text-align: center;
+  font-family: "Headland One";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.div2-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.div2-hero > svg {
+  margin-bottom: 30px;
+}
+.small-icon {
+  width: 30px;
+  height: 30px;
+}
+.big-icon {
+  width: 50px;
+  height: 30px;
+}
+/* quote-section */
+/*  */
+.quote-section {
+  padding-top: 75px;
+  padding-bottom: 180px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-image: url(./assests/imgs/bird.png);
+}
+.quote-text {
+  color: #0a3853;
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+  /*  */
+  font-size: 33px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.quote-text:not(:last-child) {
+  margin-bottom: 5px;
+}
+.quoter {
+  color: #000;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 15px;
+}
+/* trailer section */
+.trailer-section {
+  padding: 330px 0px;
+  background: url(./assests/imgs/trailer-background.webp) center/ cover
+    no-repeat;
+}
+/* .trailer-button {
+  border-radius: 45px 0px;
+  border: 3px solid #26c7ea;
+  background: #0b0e66;
+  padding: 25px 17px;
+} */
+.trailer-button {
+  border-radius: 45px 0px;
+  /*  */
+  margin: inherit;
+  border: 3px solid #26c7ea;
+  background: #0b0e66;
+  width: 260px;
+  display: block;
+  padding: 25px 0px;
+}
+.trailer-button > p {
+  color: #26c7ea;
+  text-align: center;
+  font-family: "Headland One", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+/* cards-section */
+.cards-section {
+  padding: 60px;
+  background-image: url(./assests/imgs/cards-background.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cards-h2 {
+  color: #141414;
+  text-align: justify;
+  font-family: "Headland One", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.cards-ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 25px;
+  column-gap: 35px;
+}
+.cards-li {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+.cards-li > p {
+}
+.cards-li {
+  background: rgba(255, 255, 255, 0.7);
+  padding-top: 45px;
+  padding-bottom: 35px;
+}
+.background-afterp1 {
+}
+.background-afterp2 {
+}
+.background-afterp3 {
+}
+/* footer */
