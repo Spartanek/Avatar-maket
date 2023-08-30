@@ -74,7 +74,9 @@ header {
 }
 /* hero-section */
 .hero-section {
-  padding: 180px 0px;
+  /*  */
+  padding-top: 335px;
+  padding-bottom: 180px;
   background: url(./assests/imgs/header-background.webp);
   background-position: center;
   background-repeat: no-repeat;
@@ -85,19 +87,35 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-.container-text {
-  /*  */
+/* .container-text {
   width: 280px;
-}
-
-.container-text > p {
+} */
+.hero-p {
   color: #fff;
   font-family: "Inter", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  width: 280px;
 }
+.herop-after::after {
+  content: "";
+  display: block;
+  background-image: url(./assests/imgs/whitefork.png);
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 40px;
+  margin-left: 60px;
+}
+/* .container-text > p {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+} */
 /*  */
 /* .button-header {
   padding: 25px 75px;
@@ -128,7 +146,7 @@ header {
   flex-direction: column;
   align-items: flex-end;
 }
-.div2-hero > svg {
+.div2-hero > a {
   margin-bottom: 30px;
 }
 .small-icon {
@@ -213,7 +231,8 @@ header {
 }
 .cards-h2 {
   color: #141414;
-  text-align: justify;
+  text-align: center;
+  margin-bottom: 45px;
   font-family: "Headland One", sans-serif;
   font-size: 32px;
   font-style: normal;
