@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./visually-hidden.css" />
+
     <!-- Inter 300 -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap"
@@ -59,6 +60,17 @@
         </nav>
         <a class="header-button" href=""><p>Log in</p></a>
         <!--ios button -->
+        <div class="iosbutton">
+          <div class="toggleWrapper">
+            <input
+              type="checkbox"
+              name="toggle2"
+              class="mobileToggle"
+              id="toggle2"
+            />
+            <label for="toggle2"></label>
+          </div>
+        </div>
       </div>
     </header>
     <body>
@@ -81,17 +93,17 @@
 
           <div class="div2-hero">
             <a href="https://www.instagram.com/avatar/"
-              ><svg class="small-icon">
+              ><svg class="small-icon icon-hero">
                 <use href="./assests/svg/symbol-defs.svg#icon-inst"></use></svg
             ></a>
             <a href=""
-              ><svg class="small-icon">
+              ><svg class="small-icon icon-hero">
                 <use
                   href="./assests/svg/symbol-defs.svg#icon-twitter"
                 ></use></svg
             ></a>
             <a href=""
-              ><svg class="big-icon">
+              ><svg class="big-icon icon-hero">
                 <use
                   href="./assests/svg/symbol-defs.svg#icon-youtube"
                 ></use></svg
@@ -130,19 +142,19 @@
               <p>Kaltxì</p>
             </li>
             <li class="cards-li">
-              <p class="background-afterp1">Thank you</p>
+              <p class="background-afterp2">Thank you</p>
               <p>Irayo si</p>
             </li>
             <li class="cards-li">
-              <p class="background-afterp2">How Are You?</p>
+              <p class="background-afterp3">How Are You?</p>
               <p>Ngaru lu fpom srak?</p>
             </li>
             <li class="cards-li">
-              <p class="background-afterp2">I See You</p>
+              <p class="background-afterp1">I See You</p>
               <p>Oel ngati kameie</p>
             </li>
             <li class="cards-li">
-              <p class="background-afterp3">I'm Well</p>
+              <p class="background-afterp2">I'm Well</p>
               <p>Lu fpom</p>
             </li>
             <li class="cards-li">
@@ -163,9 +175,10 @@
         <a class="footer-logo" href=""
           ><img src="./assests/imgs/logo.webp" alt=""
         /></a>
+        <hr class="line" />
         <div class="q-and-a-div">
           <div class="first-email">
-            <p>Q&A E-mail</p>
+            <p class="footer-p fp-right">Q&A E-mail</p>
             <svg
               width="269"
               height="2"
@@ -181,11 +194,11 @@
               />
             </svg>
             <a href="mailto:avatartwowqa@gmail.com"
-              ><p>avatartwowqa@gmail.com</p></a
+              ><p class="footer-p fp-left">avatartwowqa@gmail.com</p></a
             >
           </div>
           <div class="second-email">
-            <p>Cooperation E-mail</p>
+            <p class="footer-p fp-right">Cooperation E-mail</p>
             <svg
               width="194"
               height="2"
@@ -199,11 +212,16 @@
                 stroke-width="2"
                 stroke-dasharray="10 10"
               />
-              <a href="mailto:avatartwowcoop@gmail.com">
-                <p>avatartwowcoop@gmail.com</p>
-              </a>
             </svg>
+            <a href="mailto:avatartwowcoop@gmail.com">
+              <p class="footer-p fp-left">avatartwowcoop@gmail.com</p>
+            </a>
           </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="copyright-div">
+          <p>©2023 Avatar: The Way Of Water. All rights reserved</p>
         </div>
       </div>
     </footer>

@@ -154,6 +154,10 @@ header {
   width: 30px;
   height: 30px;
 }
+.icon-hero:hover {
+  /* fill: blue; */
+  stroke: #0b0e66;
+}
 .big-icon {
   width: 50px;
   height: 30px;
@@ -257,33 +261,180 @@ header {
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
-  align-items: center;
 }
 .cards-li > p {
+  color: #141414;
+  display: block;
+  margin: 0 auto;
+  font-family: "Headland One", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
 }
 .cards-li {
   background: rgba(255, 255, 255, 0.7);
   padding-top: 45px;
   padding-bottom: 35px;
 }
-.background-afterp1 {
+.background-afterp1::after {
+  content: "";
+  background-image: url(./assests/imgs/fork.png);
+  background-repeat: no-repeat;
+  rotate: 180deg;
+  width: 152px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+  margin: 40px 0px;
 }
-.background-afterp2 {
+.background-afterp2::after {
+  content: "";
+  width: 152px;
+  height: 40px;
+  background-image: url(./assests/imgs/bird.png);
+  display: block;
 }
-.background-afterp3 {
+.background-afterp3::after {
+  content: "";
+  background-image: url(./assests/imgs/fork.png);
+  background-repeat: no-repeat;
+  width: 152px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+  margin: 40px 0px;
 }
 /* footer */
 footer {
   background: rgba(43, 74, 97, 0.87);
   padding: 35px 0px;
 }
-
+.footer-logo {
+  width: 183px;
+  height: 70px;
+}
+.line {
+  margin: 0;
+  rotate: 180deg;
+  display: block;
+  width: 2px;
+  height: 153px;
+  background: #fff;
+  margin-right: 80px;
+  margin-left: 80px;
+}
+.fp-right {
+  margin-right: 20px;
+}
+.fp-left {
+  margin-left: 20px;
+}
 .footer-flexdiv {
   display: flex;
+  align-items: center;
+}
+.footer-p {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 .first-email {
   display: flex;
+  align-items: center;
 }
 .second-email {
   display: flex;
+  align-items: center;
+}
+.copyright-div {
+  color: #fff;
+  text-align: justify;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+/* ios button */
+.iosbutton {
+  width: 120px;
+}
+@green: #2ecc71;
+@lightgray: lightgray;
+@background: whitesmoke;
+
+.inactiveMixin {
+  content: "";
+  position: absolute;
+  display: block;
+}
+
+.beforeAnimation {
+  transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
+}
+
+.afterAnimation {
+  box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 0px 0 hsla(0, 0%, 0%, 0.04),
+    0 4px 9px hsla(0, 0%, 0%, 0.13), 0 3px 3px hsla(0, 0%, 0%, 0.05);
+  transition: 0.35s cubic-bezier(0.54, 1.6, 0.5, 1);
+}
+
+// Mobile Toggle Switch
+.toggleWrapper {
+  margin: auto;
+  padding: 20px;
+  width: 55px;
+  border: 1px solid @lightgray;
+  margin-top: 20px;
+  border-radius: 5px;
+  background: white;
+  input {
+    &.mobileToggle {
+      opacity: 0; // hides checkbox
+      position: absolute;
+      & + label {
+        position: relative;
+        display: inline-block;
+        user-select: none;
+        transition: 0.4s ease;
+        height: 30px;
+        width: 50px;
+        border: 1px solid #e4e4e4;
+        border-radius: 60px;
+        &:before {
+          .inactiveMixin;
+          .beforeAnimation;
+          height: 30px;
+          width: 51px;
+          top: 0;
+          left: 0;
+          border-radius: 30px;
+        }
+        &:after {
+          .inactiveMixin;
+          .afterAnimation;
+          background: @background;
+          height: 28px;
+          width: 28px;
+          top: 1px;
+          left: 0px;
+          border-radius: 60px;
+        }
+      }
+      // When Active
+      &:checked {
+        & + label:before {
+          background: @green; // Active Color
+          transition: width 0.2s cubic-bezier(0, 0, 0, 0.1);
+        }
+        & + label:after {
+          left: 54px - 30px;
+        }
+      }
+    }
+  }
 }
