@@ -159,7 +159,7 @@ header {
   height: 30px;
 }
 .icon-hero:hover {
-  /* fill: blue; */
+  fill: blue;
   stroke: var(--background-color);
 }
 .big-icon {
@@ -295,9 +295,10 @@ header {
 .background-afterp2::after {
   content: "";
   width: 152px;
-  height: 40px;
+  height: 100px;
   background-image: url(./assests/imgs/bird.png);
   display: block;
+  background-position: center;
 }
 .background-afterp3::after {
   content: "";
@@ -354,92 +355,110 @@ footer {
   display: flex;
   align-items: center;
 }
-.copyright-div {
-  color:var(--color-text1);
-  text-align: justify;
+.copyright-div > p {
+  color: var(--color-text1);
+  text-align: center;
   font-family: "Inter", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-left: 46єщ0px;
+  margin-left: 200px;
 }
 /* ios button */
-.iosbutton {
+/* Estilo iOS */
+.switch__container {
+  margin: 30px auto;
   width: 120px;
 }
-@green: #2ecc71;
-@lightgray: lightgray;
-@background: whitesmoke;
 
-.inactiveMixin {
-  content: "";
+.switch {
+  visibility: hidden;
   position: absolute;
+  margin-left: -9999px;
+}
+
+.switch + label {
   display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
 }
 
-.beforeAnimation {
-  transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
+.switch--shadow + label {
+  padding: 2px;
+  width: 120px;
+  height: 60px;
+  background-color: #dddddd;
+  border-radius: 60px;
+}
+.switch--shadow + label:before,
+.switch--shadow + label:after {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  content: "";
+}
+.switch--shadow + label:before {
+  right: 1px;
+  background-color: #f1f1f1;
+  border-radius: 60px;
+  transition: background 0.4s;
+}
+.switch--shadow + label:after {
+  width: 62px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s;
+}
+.switch--shadow:checked + label:before {
+  background-color: #8ce196;
+}
+.switch--shadow:checked + label:after {
+  transform: translateX(60px);
 }
 
-.afterAnimation {
-  box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 0px 0 hsla(0, 0%, 0%, 0.04),
-    0 4px 9px hsla(0, 0%, 0%, 0.13), 0 3px 3px hsla(0, 0%, 0%, 0.05);
-  transition: 0.35s cubic-bezier(0.54, 1.6, 0.5, 1);
+/* Estilo Flat */
+.switch--flat + label {
+  padding: 2px;
+  width: 120px;
+  height: 60px;
+  background-color: #dddddd;
+  border-radius: 60px;
+  transition: background 0.4s;
 }
-
-// Mobile Toggle Switch
-.toggleWrapper {
-  margin: auto;
-  padding: 20px;
-  width: 55px;
-  border: 1px solid @lightgray;
-  margin-top: 20px;
-  border-radius: 5px;
-  background: white;
-  input {
-    &.mobileToggle {
-      opacity: 0; // hides checkbox
-      position: absolute;
-      & + label {
-        position: relative;
-        display: inline-block;
-        user-select: none;
-        transition: 0.4s ease;
-        height: 30px;
-        width: 50px;
-        border: 1px solid #e4e4e4;
-        border-radius: 60px;
-        &:before {
-          .inactiveMixin;
-          .beforeAnimation;
-          height: 30px;
-          width: 51px;
-          top: 0;
-          left: 0;
-          border-radius: 30px;
-        }
-        &:after {
-          .inactiveMixin;
-          .afterAnimation;
-          background: @background;
-          height: 28px;
-          width: 28px;
-          top: 1px;
-          left: 0px;
-          border-radius: 60px;
-        }
-      }
-      // When Active
-      &:checked {
-        & + label:before {
-          background: @green; // Active Color
-          transition: width 0.2s cubic-bezier(0, 0, 0, 0.1);
-        }
-        & + label:after {
-          left: 54px - 30px;
-        }
-      }
-    }
-  }
+.switch--flat + label:before,
+.switch--flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+.switch--flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: #fff;
+  border-radius: 60px;
+  transition: background 0.4s;
+}
+.switch--flat + label:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 56px;
+  background-color: #dddddd;
+  border-radius: 52px;
+  transition: margin 0.4s, background 0.4s;
+}
+.switch--flat:checked + label {
+  background-color: #8ce196;
+}
+.switch--flat:checked + label:after {
+  margin-left: 60px;
+  background-color: #8ce196;
 }
