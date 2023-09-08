@@ -3,6 +3,8 @@
   --color-text2: #26c7ea;
   --color-text3: #94cfff;
   --background-color: #0b0e66;
+  --quote-text: #0a3853;
+  --heading: #141414;
 }
 a {
   text-decoration: none;
@@ -14,7 +16,7 @@ html {
   scroll-behavior: smooth;
 }
 .container {
-  max-width: 1070px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0px 15px;
 }
@@ -32,6 +34,21 @@ header {
   display: flex;
   align-items: center;
 }
+.button-forhover:hover {
+  background: var(--color-text3);
+  color: var(--quote-text);
+}
+.button-forhover:hover > p {
+  color: inherit;
+}
+.button-forhover:active {
+  background: green;
+  color: greenyellow;
+}
+.button-forhover:active > p {
+  color: inherit;
+}
+
 .nav-ul {
   display: flex;
   align-items: center;
@@ -61,6 +78,14 @@ header {
   font-weight: 300;
   line-height: normal;
 }
+.nav-link:hover > p {
+  color: var(--color-text3);
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
 .header-button {
   border-radius: 45px 0px;
   border: 3px solid var(--color-text2);
@@ -77,6 +102,22 @@ header {
   font-weight: 400;
   line-height: normal;
 }
+.ios-button-div {
+  display: flex;
+  position: absolute;
+  /* трохи дивно */
+  transform: translateX(1050px);
+}
+.ios-button-div > p {
+  color: var(--color-text1);
+  text-align: center;
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 /* hero-section */
 .hero-section {
   /*  */
@@ -158,9 +199,14 @@ header {
   width: 30px;
   height: 30px;
 }
+.icon-hero {
+  fill: var(--color-text1);
+}
 .icon-hero:hover {
-  fill: blue;
-  stroke: var(--background-color);
+  fill: var(--color-text2);
+}
+.icon-hero:active {
+  fill: var(--background-color);
 }
 .big-icon {
   width: 50px;
@@ -182,7 +228,7 @@ header {
   background-image: url(./assests/imgs/bird.png);
 }
 .quote-text {
-  color: #0a3853;
+  color: var(--quote-text);
   margin: 0 auto;
   font-family: "Inter", sans-serif;
   /*  */
@@ -245,7 +291,7 @@ header {
   background-size: cover;
 }
 .cards-h2 {
-  color: #141414;
+  color: var(--heading);
   text-align: center;
   margin-bottom: 45px;
   font-family: "Headland One", sans-serif;
@@ -264,10 +310,10 @@ header {
 .cards-li {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
 }
 .cards-li > p {
-  color: #141414;
+  color: var(--heading);
   display: block;
   margin: 0 auto;
   font-family: "Headland One", sans-serif;
@@ -275,6 +321,7 @@ header {
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+  text-align: center;
 }
 .cards-li {
   background: rgba(255, 255, 255, 0.7);
@@ -292,13 +339,16 @@ header {
   margin: 0 auto;
   margin: 40px 0px;
 }
+/* щось дивне */
 .background-afterp2::after {
   content: "";
   width: 152px;
   height: 100px;
-  background-image: url(./assests/imgs/bird.png);
+  background-image: url(./assests/imgs/bird-after.png);
   display: block;
+  background-repeat: no-repeat;
   background-position: center;
+  margin: 10px 0px;
 }
 .background-afterp3::after {
   content: "";
@@ -307,12 +357,16 @@ header {
   width: 152px;
   height: 40px;
   display: block;
-  margin: 0 auto;
+  margin: 0;
   margin: 40px 0px;
 }
 /* footer */
 footer {
-  background: rgba(43, 74, 97, 0.87);
+  /* background-image: url(./assests/imgs/footer-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+  background: url(./assests/imgs/footer-background.jpg) center/cover no-repeat;
   padding: 35px 0px;
 }
 .footer-logo {
@@ -366,12 +420,15 @@ footer {
   margin-left: 200px;
 }
 /* ios button */
+
 /* Estilo iOS */
-.switch__container {
+/* .switch__container {
   margin: 30px auto;
   width: 120px;
+} */
+.switch__container {
+  margin: 0px 10px;
 }
-
 .switch {
   visibility: hidden;
   position: absolute;
@@ -425,8 +482,8 @@ footer {
 /* Estilo Flat */
 .switch--flat + label {
   padding: 2px;
-  width: 120px;
-  height: 60px;
+  width: 36px;
+  height: 20px;
   background-color: #dddddd;
   border-radius: 60px;
   transition: background 0.4s;
@@ -450,7 +507,8 @@ footer {
   top: 4px;
   left: 4px;
   bottom: 4px;
-  width: 56px;
+  height: 12px;
+  width: 12px;
   background-color: #dddddd;
   border-radius: 52px;
   transition: margin 0.4s, background 0.4s;
@@ -459,6 +517,6 @@ footer {
   background-color: #8ce196;
 }
 .switch--flat:checked + label:after {
-  margin-left: 60px;
+  margin-left: 18px;
   background-color: #8ce196;
 }
