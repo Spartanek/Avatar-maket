@@ -339,7 +339,7 @@ header {
   margin: 0 auto;
   margin: 40px 0px;
 }
-/* щось дивне */
+
 .background-afterp2::after {
   content: "";
   width: 152px;
@@ -348,7 +348,7 @@ header {
   display: block;
   background-repeat: no-repeat;
   background-position: center;
-  margin: 10px 0px;
+  margin: 10px auto;
 }
 .background-afterp3::after {
   content: "";
@@ -484,7 +484,7 @@ footer {
   padding: 2px;
   width: 36px;
   height: 20px;
-  background-color: #dddddd;
+  background-color: transparent;
   border-radius: 60px;
   transition: background 0.4s;
 }
